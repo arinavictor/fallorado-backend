@@ -2,12 +2,24 @@ class EventsController < ApplicationController
     def index
         @events = Event.all 
 
-        render json: @events, include: :categories
+        render json: @events, include: :category
     end 
 
     def show
         @event = Event.find(params[:id])
 
-        render json: @event, include: :categories
+        render json: @event, include: :category
+    end 
+
+    def create
+        @event = Event.create(
+            name: params[:name],
+            location: params[:location],
+            description: params[:description],
+            url: params[:url],
+            category_id: params[:category_id]
+            )
+
+            redirect_to "http://localhost:3000/index.html"
     end 
 end
