@@ -7,13 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Category.destroy_all
 Event.destroy_all
+Category.destroy_all
 
 festival = Category.create(name: "Festival Things")
 farm = Category.create(name: "Farm Things")
 haunted = Category.create(name: "Haunted Things")
-nature = Category.create(name: "Nature Things")
 botanic = Category.create(name: "Botanic Garden Things")
 
 
@@ -24,14 +23,28 @@ farm.events.create(
     url: "https://andersonfarms.com/")
 farm.events.create(
     name: "Cottonwood Farms Pumpkin Patch",
-    location: "10600 Isabelle Rd. (Highway 287 & Isabelle), Lafayette, CO",
-    description: "Family farm located just north of Lafayette, selling pumpkins and fall produce. Play in the four-acre corn or straw bale maze, and see farm animals and tractors. Wagon ride available on Saturdays and Sundays. Open September 21 through OCtober 31. Price: FREE on weekdays, $5 on weekends. ",
+    location: "10600 Isabelle Rd., Lafayette, CO",
+    description: "Family farm located just north of Lafayette, selling pumpkins and fall produce. Play in the four-acre corn or straw bale maze, and see farm animals and tractors. Wagon ride available on Saturdays and Sundays. Open Sep. 21 - Oct. 31. Price: $0-5. ",
     url: "https://cottonwoodfarms.com/")
+    farm.events.create(
+    name: "The Bee Hugger",
+    location: "4801 Ute Hwy., Longmont, CO",
+    description: "Known for its U Pick Sunflower Field and pumpkins. The sunflower fields will be a decorated maze, there are old tractors to climb, vintage campers and VW’s to explore and many more sweet surprises. Open daily. Price: FREE",
+    url: "https://www.facebook.com/pages/category/Farm/The-Bee-Hugger-1567182556761972/"
+    )
 farm.events.create(
-    name: "Chatfield Farms Corn Maze",
-    location: "8500 West Deer Creek Canyon",
-    description: "Seven-acre corn maze. Mini maze for the little ones. View the design from two 15-foot tall illuminated bridges. Open September 20 through October 27. Price: $9-14",
-    url: "http://www.botanicgardens.org/corn-maze")
+    name: "Nick's Garden Center",
+    location: "2001 S. Chambers Rd. , Aurora, CO",
+    description: "Straw maze, family tractor ride through the Tunnel of Terror, kiddie train ride, pedal karts, jumping castles. Huge pumpkin patch. Sep. 28 - Oct. 27. Price: $4-13",
+    url: "https://nicksgardencenter.com/gardening-blog/nicksfallfest/"
+    )
+farm.events.create(
+    name: "Rock Creek Farm",
+    location: "2005 South 112th Street, Broomfield, CO",
+    description: "working farm with 100 acres of U-Pick-Em pumpkin fields to explore. The farm also has pigs, goats, ponies, donkeys, chickens and other farm animals. There's a corn maze, too. Open Oct. 5 - Oct. 31. Price: $6-9. ",
+    url: "http://www.rockcreekfarm.com/"
+    )
+    
  
 
     botanic.events.create(
@@ -43,9 +56,28 @@ farm.events.create(
     botanic.events.create(
         name: "Día de los Muertos Celebration", 
         location: "1007 York St, Denver, CO 80206", 
-        description: "Denver Botanic Gardens’ observance of Día de los Muertos will be celebrated this year with indoor screenings of Disney’s Pixar film 'Coco.' Experience the colorful fun of Day of the Dead with family crafts, altars and more. November 2, 2019. Price: $9.50-12.50",
+        description: "Denver Botanic Gardens’ observance of Día de los Muertos will be celebrated this year with indoor screenings of Disney’s Pixar film 'Coco.' Experience the colorful fun of Day of the Dead with family crafts, altars and more. Nov. 2. Price: $9.50-12.50.",
         url: "https://www.botanicgardens.org/events/special-events/dia-de-los-muertos"
     )
+    botanic.events.create(
+        name: "Botanic Gardens at Chatfield Farms Corn Maze",
+        location: "8500 West Deer Creek Canyon",
+        description: "Seven-acre corn maze. Mini maze for the little ones. View the design from two 15-foot tall illuminated bridges. Open Sep. 20 - Oct. 27. Price: $9-14",
+        url: "http://www.botanicgardens.org/corn-maze"
+    )
+    botanic.events.create(
+        name: "Botanic Gardens at Chatfield Farms Pumpkin Festival",
+        location: "8500 West Deer Creek Canyon",
+        description: "Enjoy a day of fall activities at Chatfield Farms. Ticket price includes access to the 10-acre pumpkin patch and family and children’s activities. Pumpkin prices vary by size; the average price is $8. Oct. 11-13. Price: $4-10.",
+        url: "https://www.botanicgardens.org/events/special-events/pumpkin-festival"
+    )
+    botanic.events.create(
+        name: "Winter Gift Market",
+        location: "1007 York Street, Denver, CO",
+        description: "Vendors sell one-­of-a-kind, handcrafted holiday items; bath and body products; pottery; jewelry; specialty foods; clothing; antiques and more. The Gardens Guild offers its popular herbal vinegars and seasonings. Open Nov. 21 - 23. Price: FREE",
+        url: "https://www.botanicgardens.org/events/special-events/winter-gift-market"
+    )
+
 
 
     festival.events.create(
@@ -60,18 +92,7 @@ farm.events.create(
         description: "Fall into some old-fashioned fun during our annual Pumpkin Harvest Festival, a long-time Denver favorite reimagined for 2019. Celebrate all things autumn featuring live music, food trucks, pioneer games, and a pumpkin patch. New this year, 98.5 KYGO will be live onsite Saturday from 10am – noon. Oct. 5-6. Price: $0-10.",
         url: "https://www.denver.org/event/pumpkin-harvest-festival/71895/"
     )
-    festival.events.create(
-        name: "Ironton's Annual Fall Festival",
-        location: "Ironton Distillery and Crafthouse - RiNo District 3636 Chesnut Pl, Denver, CO 80216",
-        description: "Come celebrate all things fall at the annual Ironton Distillery & Crafthouse Fall Festival featuring a FREE Pumpkin Patch!! This event is packed full of fun including the limited release of our Wheat Whiskey, beer from Blue Moon RiNo, music from Ghost Town Drifters, and FREE axe throwing with Jack's Axe Throwing!! Oct. 12. Price: Free.",
-        url: "https://www.denver.org/event/irontons-annual-fall-festival/73374/"
-    )
-    festival.events.create(
-        name: "Stapleton Fall Festival",
-        location: "Conservatory Green at Stapleton E 50th Ave & Valentina Court, Denver, CO 80238",
-        description: "Enjoy music, fall drinks, games, face painting and more. We will be having a pumpkin decorating contest as well as a costume contest so get the kiddos dressed up and excited to show their creativity!. Oct. 26. Price: Free.",
-        url: "https://www.eventbrite.com/e/stapleton-fall-fest-tickets-71566901529"
-    )
+    
     festival.events.create(
         name: "3rd Annual Octoberfest - Fall Festival",
         location: "Saint Peter and Paul Roman Catholic Church 3900 Pierce Street Wheat Ridge, CO 80033",
@@ -90,38 +111,7 @@ farm.events.create(
         description: "Mark your calendars and start brainstorming those costumes! For three days, the Museum will host an unBOOlievably fun fall festival with treats galore, carnival games, Halloween crafts, special characters and more. Oct. 26. Price: $0-16",
         url: "https://local.aarp.org/event/trick-or-treat-street-fall-festival-2019-10-26-denver-co.html"
     )
-    festival.events.create(
-        name: "Horseshoe Fall Craft and Flea Market",
-        location: "Broncos Stadium, Lot G Denver, CO 80204",
-        description: "The Horseshoe Craft & Flea Market is a place where emerging, undiscovered and experienced artists, designers, crafters, and vintage collectors can set up their own little shop, showcase their talents and meet their customers. Oct. 5-6. Price: $5.",
-        url: "https://festivalnet.com/53972/Denver-Colorado/Marketplace-Expos/Horseshoe-Fall-Craft-and-Flea-Market"
-    )
-    festival.events.create(
-        name: "Goat Yoga - Sonflower Ranch Fall Festival",
-        location: "15445 Powhaton Rd, Brighton, CO  80603",
-        description: "It’s nearly time for this annual special event at Sonflower Ranch. There will be much to do, including, Farm tours to see the animals, a variety of vendors, bouncy house, face painting, hay rides, BBQ and goat yoga. Oct. 13-14. Price: $20",
-        url: "https://www.eventbrite.com/e/goat-yoga-october-12th-sonflower-ranch-fall-festival-tickets-72394041527?aff=erelexpmlt"
-    )
-    festival.events.create(
-        name: "Fall Arts & Crafts Fair",
-        location: "Wellington Webb Building Denver, CO 80202",
-        description: "This event, which takes place after Thanksgiving each year, is a great place to shop for your holiday gifts! 50+ City and County of Denver employees and vendors market their homemade arts and crafts. November. Price: Free.",
-        url: "https://festivalnet.com/71829/Denver-Colorado/Craft-Shows/Fall-Arts-Crafts-Fair"
-    )
-    festival.events.create(
-        name: "Halloween Harvest Festival - Westminster",
-        location: "4800 W 92nd Ave, Westminster, CO 80031",
-        description: "Bring the whole family to kick off the fall season with free carnival games, trick-or-treating, spectacular hot-air balloons, live musical performances by local bands, a beer garden, food trucks, arts and crafts from, jumping castles, local vendors, a bonfire and a BBQ competition. You can even pick out the perfect pumpkin at the pumpkin patch! Oct. 19. Price: Free.",
-        url: "https://www.cityofwestminster.us/specialevents"
-    )
-    festival.events.create(
-        name: "Fall Fest",
-        location: "Utah Park, 1800 S Peoria St, Aurora, CO 80012",
-        description: "We would like to invite the entire community to join us for some fall family fun! We will have a free fall photo booth set up so make sure to dress up if you want to get a family photo. We will have lots of free activities to entertain the kids like a Bouncy House, Face Painting, Pumpkin Decorating, Bobbing for Apples, and more! Oct. 19. Price: Free.",
-        url: "https://www.eventbrite.com/e/fall-fest-tickets-71669670915"
-    )
-
-
+    
 
     haunted.events.create(
         name: "13th Floor Haunted House",
@@ -140,5 +130,17 @@ farm.events.create(
         location: "4504 S Independence St, Denver, CO 80123",
         description: "The Horror Theater Haunted House is unlike any other home haunt in Colorado. Rivaling even the most renowned haunted houses, there is no shortage of scares in this intricately designed space. October. Price: Your Soul.",
         url: "https://horrortheaterdenver.com/"
+    )
+    haunted.events.create(
+        name: "World's Scariest Haunted House",
+        location: "10500 W Bowles Ave, Littleton, CO 80127",
+        description: "The Worlds Scariest Haunted House opened in 2014 to rejoin the haunting in Colorado. We have crept in again from the silence and are back with a terrifically horrifying haunt to satisfy all your deepest and darkest fantasies and fears. Oct. 4-31. Price: $20.",
+        url: "http://www.worldsscariesthauntedhouse.com/"
+    )
+    haunted.events.create(
+        name: "City Of The Dead Haunted House",
+        location: "7007 E 88th Ave, Henderson, CO 80640",
+        description: "Denver's Best Haunted House. Sept-Oct. Price: $ 30",
+        url: "https://www.cityofthedeadhaunt.com/index.html"
     )
 
