@@ -183,4 +183,3 @@ farm.events.create(
         description: "Denver's Best Haunted House. Sept-Oct. Price: $ 30",
         url: "https://www.cityofthedeadhaunt.com/index.html"
     )
-

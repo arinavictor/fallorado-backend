@@ -20,6 +20,6 @@ class EventsController < ApplicationController
             category_id: params[:category_id]
             )
 
-            redirect_to "http://localhost:3000/index.html"
+            redirect_to "http://localhost:3000/search.html"
     end 
 end
